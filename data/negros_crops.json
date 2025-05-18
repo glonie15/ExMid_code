@@ -1,0 +1,316 @@
+[
+    {
+        "crop": "Rice",
+        "pH_min": 5.5,
+        "pH_max": 7.0,
+        "soil_type": "clay",
+        "moisture_level": "wet",
+        "duration_days": 120
+    },
+    {
+        "crop": "Corn",
+        "pH_min": 5.8,
+        "pH_max": 7.0,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 100
+    },
+    {
+        "crop": "Sugarcane",
+        "pH_min": 6.0,
+        "pH_max": 7.5,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 270
+    },
+    {
+        "crop": "Banana",
+        "pH_min": 5.5,
+        "pH_max": 6.5,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 300
+    },
+    {
+        "crop": "Pineapple",
+        "pH_min": 4.5,
+        "pH_max": 6.5,
+        "soil_type": "sandy",
+        "moisture_level": "dry",
+        "duration_days": 240
+    },
+    {
+        "crop": "Cassava",
+        "pH_min": 5.0,
+        "pH_max": 6.5,
+        "soil_type": "sandy",
+        "moisture_level": "dry",
+        "duration_days": 210
+    },
+    {
+        "crop": "Sweet Potato",
+        "pH_min": 5.5,
+        "pH_max": 6.5,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 120
+    },
+    {
+        "crop": "Taro",
+        "pH_min": 5.0,
+        "pH_max": 6.0,
+        "soil_type": "clay",
+        "moisture_level": "wet",
+        "duration_days": 180
+    },
+    {
+        "crop": "Tomato",
+        "pH_min": 5.5,
+        "pH_max": 6.8,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 90
+    },
+    
+        {
+          "crop": "Sugarcane",
+          "pH_min": 6.0,
+          "pH_max": 7.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 365
+        },
+        {
+          "crop": "Rice",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "clay",
+          "moisture_level": "Wet",
+          "duration_days": 120
+        },
+        {
+          "crop": "Corn",
+          "pH_min": 5.8,
+          "pH_max": 7.0,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 90
+        },
+        {
+          "crop": "Coconut",
+          "pH_min": 5.0,
+          "pH_max": 8.0,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 365
+        },
+        {
+          "crop": "Banana",
+          "pH_min": 5.5,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Wet",
+          "duration_days": 270
+        },
+        {
+          "crop": "Cassava",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Dry",
+          "duration_days": 180
+        },
+        {
+          "crop": "Sweet Potato",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 120
+        },
+        {
+          "crop": "Mango",
+          "pH_min": 5.5,
+          "pH_max": 7.5,
+          "soil_type": "loam",
+          "moisture_level": "Dry",
+          "duration_days": 150
+        },
+        {
+          "crop": "Eggplant",
+          "pH_min": 5.5,
+          "pH_max": 6.8,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 90
+        },
+        {
+          "crop": "Tomato",
+          "pH_min": 5.5,
+          "pH_max": 6.8,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 85
+        },
+        {
+          "crop": "Onion",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "sandy",
+          "moisture_level": "Dry",
+          "duration_days": 90
+        },
+        {
+          "crop": "Carrot",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 75
+        },
+        {
+          "crop": "Cabbage",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 90
+        },
+        {
+          "crop": "Cauliflower",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 100
+        },
+        {
+          "crop": "Pechay",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 45
+        },
+        {
+          "crop": "Ginger",
+          "pH_min": 6.0,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 210
+        },
+        {
+          "crop": "Turmeric",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 240
+        },
+        {
+          "crop": "Coffee",
+          "pH_min": 6.0,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 365
+        },
+        {
+          "crop": "Cacao",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 365
+        },
+        {
+          "crop": "Jackfruit",
+          "pH_min": 6.0,
+          "pH_max": 7.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 300
+        },
+        {
+          "crop": "Yam",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 180
+        },
+        {
+          "crop": "Broccoli",
+          "pH_min": 6.0,
+          "pH_max": 7.0,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 90
+        },
+        {
+          "crop": "Radish",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 60
+        },
+        {
+          "crop": "Squash",
+          "pH_min": 5.5,
+          "pH_max": 6.8,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 100
+        },
+        {
+          "crop": "Pineapple",
+          "pH_min": 4.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 180
+        },
+        {
+          "crop": "Camote",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "sandy",
+          "moisture_level": "Moist",
+          "duration_days": 120
+        },
+        {
+          "crop": "Calamansi",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 180
+        },
+        {
+          "crop": "Papaya",
+          "pH_min": 6.0,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 150
+        },
+        {
+          "crop": "Lanzones",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 180
+        },
+        {
+          "crop": "Rambutan",
+          "pH_min": 5.5,
+          "pH_max": 6.5,
+          "soil_type": "loam",
+          "moisture_level": "Moist",
+          "duration_days": 180
+        }
+      ]
+      

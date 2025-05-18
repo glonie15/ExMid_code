@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation</title>
+</head>
+<body>
+    <h1>Philippine Crop Recommendation System</h1>
+
+    <form method="POST" action="/">
+        <label for="ph">Soil pH:</label>
+        <input type="number" step="0.1" name="ph" id="ph" value="{{ request.form.ph or '' }}" required><br><br>
+
+        <label for="soil_type">Soil Type:</label>
+        <select name="soil_type" id="soil_type" required>
+            <option value="">Select Soil Type</option>
+            <option value="loam" {% if request.form.soil_type == 'loam' %}selected{% endif %}>Loam</option>
+            <option value="sandy" {% if request.form.soil_type == 'sandy' %}selected{% endif %}>Sandy</option>
+            <option value="clay" {% if request.form.soil_type == 'clay' %}selected{% endif %}>Clay</option>
+        </select><br><br>
+
+        <label for="moisture">Soil Moisture Level:</label>
+        <select name="moisture" id="moisture" required>
+            <option value="">Select Moisture Level</option>
+            <option value="dry" {% if request.form.moisture == 'dry' %}selected{% endif %}>Dry (30–50%)</option>
+            <option value="moist" {% if request.form.moisture == 'moist' %}selected{% endif %}>Moist (50–70%)</option>
+            <option value="wet" {% if request.form.moisture == 'wet' %}selected{% endif %}>Wet (70–90%)</option>
+        </select>
+        <p><strong>Moisture Reference:</strong><br>
+        - Dry: 30–50%<br>
+        - Moist: 50–70%<br>
+        - Wet: 70–90%</p><br>
+
+        <button type="submit">Submit</button>
+        <button type="submit" name="exit" value="1">Exit</button>
+    </form>
+
+    {% if crops %}
+        <h2>Recommended Crops:</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <th>Crop Name</th>
+                <th>pH Range</th>
+                <th>Soil Type</th>
+                <th>Moisture</th>
+                <th>Harvest Date</th>
+            </tr>
+            {% for crop in crops %}
+            <tr>
+                <td>{{ crop.crop }}</td>
+                <td>{{ crop.pH_min }} – {{ crop.pH_max }}</td>
+                <td>{{ crop.soil_type.capitalize() }}</td>
+                <td>{{ crop.moisture_level.capitalize() }}</td>
+                <td>{{ crop.harvest_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% elif request.method == 'POST' %}
+        <p style="color:red;"><strong>No matching crops found for your input.</strong></p>
+    {% endif %}
+</body>
+</html>
+
