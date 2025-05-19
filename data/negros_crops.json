@@ -5,7 +5,21 @@
         "pH_max": 7.0,
         "soil_type": "clay",
         "moisture_level": "wet",
-        "duration_days": 120
+        "duration_days": 120,
+        "planting_season": ["June-July", "December-January"],
+        "spacing": {
+            "between_plants": "20 cm",
+            "between_rows": "20 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "medium"
+        },
+        "sunlight": "full",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "4-6 tons",
+        "water_requirement": "1500-2000mm/season"
     },
     {
         "crop": "Corn",
@@ -13,7 +27,21 @@
         "pH_max": 7.0,
         "soil_type": "loam",
         "moisture_level": "moist",
-        "duration_days": 100
+        "duration_days": 100,
+        "planting_season": ["March-May", "September-November"],
+        "spacing": {
+            "between_plants": "30 cm",
+            "between_rows": "75 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "5-8 tons",
+        "water_requirement": "500-800mm/season"
     },
     {
         "crop": "Sugarcane",
@@ -21,7 +49,21 @@
         "pH_max": 7.5,
         "soil_type": "loam",
         "moisture_level": "moist",
-        "duration_days": 270
+        "duration_days": 270,
+        "planting_season": ["October-December"],
+        "spacing": {
+            "between_plants": "30 cm",
+            "between_rows": "100 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "high",
+        "yield_per_hectare": "70-100 tons",
+        "water_requirement": "1500-2500mm/season"
     },
     {
         "crop": "Banana",
@@ -29,7 +71,21 @@
         "pH_max": 6.5,
         "soil_type": "loam",
         "moisture_level": "moist",
-        "duration_days": 300
+        "duration_days": 300,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "2.5 m",
+            "between_rows": "3 m"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "high",
+            "phosphorus": "medium",
+            "potassium": "high"
+        },
+        "sunlight": "full to partial",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "20-40 tons",
+        "water_requirement": "1200-2200mm/year"
     },
     {
         "crop": "Pineapple",
@@ -37,7 +93,21 @@
         "pH_max": 6.5,
         "soil_type": "sandy",
         "moisture_level": "dry",
-        "duration_days": 240
+        "duration_days": 240,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "30 cm",
+            "between_rows": "60 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "low",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "high",
+        "yield_per_hectare": "40-60 tons",
+        "water_requirement": "1000-1500mm/year"
     },
     {
         "crop": "Cassava",
@@ -45,7 +115,21 @@
         "pH_max": 6.5,
         "soil_type": "sandy",
         "moisture_level": "dry",
-        "duration_days": 210
+        "duration_days": 210,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "1 m",
+            "between_rows": "1 m"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "medium",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "high",
+        "yield_per_hectare": "20-30 tons",
+        "water_requirement": "800-1200mm/season"
     },
     {
         "crop": "Sweet Potato",
@@ -53,7 +137,21 @@
         "pH_max": 6.5,
         "soil_type": "loam",
         "moisture_level": "moist",
-        "duration_days": 120
+        "duration_days": 120,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "30 cm",
+            "between_rows": "90 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "medium",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "15-20 tons",
+        "water_requirement": "600-900mm/season"
     },
     {
         "crop": "Taro",
@@ -61,7 +159,21 @@
         "pH_max": 6.0,
         "soil_type": "clay",
         "moisture_level": "wet",
-        "duration_days": 180
+        "duration_days": 180,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "50 cm",
+            "between_rows": "50 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "high",
+            "potassium": "medium"
+        },
+        "sunlight": "partial",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "10-15 tons",
+        "water_requirement": "1500-2000mm/season"
     },
     {
         "crop": "Tomato",
@@ -69,248 +181,86 @@
         "pH_max": 6.8,
         "soil_type": "loam",
         "moisture_level": "moist",
-        "duration_days": 90
+        "duration_days": 90,
+        "planting_season": ["October-February"],
+        "spacing": {
+            "between_plants": "45 cm",
+            "between_rows": "90 cm"
+        },
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "high",
+            "potassium": "high"
+        },
+        "sunlight": "full",
+        "pest_resistance": "low",
+        "yield_per_hectare": "20-40 tons",
+        "water_requirement": "400-600mm/season"
     },
-    
-        {
-          "crop": "Sugarcane",
-          "pH_min": 6.0,
-          "pH_max": 7.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 365
+    {
+        "crop": "Coconut",
+        "pH_min": 5.0,
+        "pH_max": 8.0,
+        "soil_type": "sandy",
+        "moisture_level": "moist",
+        "duration_days": 365,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "8 m",
+            "between_rows": "8 m"
         },
-        {
-          "crop": "Rice",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "clay",
-          "moisture_level": "Wet",
-          "duration_days": 120
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "medium",
+            "potassium": "high"
         },
-        {
-          "crop": "Corn",
-          "pH_min": 5.8,
-          "pH_max": 7.0,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 90
+        "sunlight": "full",
+        "pest_resistance": "high",
+        "yield_per_hectare": "80-120 nuts/tree/year",
+        "water_requirement": "1500-2500mm/year"
+    },
+    {
+        "crop": "Mango",
+        "pH_min": 5.5,
+        "pH_max": 7.5,
+        "soil_type": "loam",
+        "moisture_level": "dry",
+        "duration_days": 150,
+        "planting_season": ["April-May"],
+        "spacing": {
+            "between_plants": "10 m",
+            "between_rows": "10 m"
         },
-        {
-          "crop": "Coconut",
-          "pH_min": 5.0,
-          "pH_max": 8.0,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 365
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "medium",
+            "potassium": "high"
         },
-        {
-          "crop": "Banana",
-          "pH_min": 5.5,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Wet",
-          "duration_days": 270
+        "sunlight": "full",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "8-12 tons",
+        "water_requirement": "1000-1500mm/year"
+    },
+    {
+        "crop": "Eggplant",
+        "pH_min": 5.5,
+        "pH_max": 6.8,
+        "soil_type": "loam",
+        "moisture_level": "moist",
+        "duration_days": 90,
+        "planting_season": ["Year-round"],
+        "spacing": {
+            "between_plants": "50 cm",
+            "between_rows": "75 cm"
         },
-        {
-          "crop": "Cassava",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Dry",
-          "duration_days": 180
+        "fertilizer_needs": {
+            "nitrogen": "medium",
+            "phosphorus": "high",
+            "potassium": "high"
         },
-        {
-          "crop": "Sweet Potato",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 120
-        },
-        {
-          "crop": "Mango",
-          "pH_min": 5.5,
-          "pH_max": 7.5,
-          "soil_type": "loam",
-          "moisture_level": "Dry",
-          "duration_days": 150
-        },
-        {
-          "crop": "Eggplant",
-          "pH_min": 5.5,
-          "pH_max": 6.8,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 90
-        },
-        {
-          "crop": "Tomato",
-          "pH_min": 5.5,
-          "pH_max": 6.8,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 85
-        },
-        {
-          "crop": "Onion",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "sandy",
-          "moisture_level": "Dry",
-          "duration_days": 90
-        },
-        {
-          "crop": "Carrot",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 75
-        },
-        {
-          "crop": "Cabbage",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 90
-        },
-        {
-          "crop": "Cauliflower",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 100
-        },
-        {
-          "crop": "Pechay",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 45
-        },
-        {
-          "crop": "Ginger",
-          "pH_min": 6.0,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 210
-        },
-        {
-          "crop": "Turmeric",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 240
-        },
-        {
-          "crop": "Coffee",
-          "pH_min": 6.0,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 365
-        },
-        {
-          "crop": "Cacao",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 365
-        },
-        {
-          "crop": "Jackfruit",
-          "pH_min": 6.0,
-          "pH_max": 7.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 300
-        },
-        {
-          "crop": "Yam",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 180
-        },
-        {
-          "crop": "Broccoli",
-          "pH_min": 6.0,
-          "pH_max": 7.0,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 90
-        },
-        {
-          "crop": "Radish",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 60
-        },
-        {
-          "crop": "Squash",
-          "pH_min": 5.5,
-          "pH_max": 6.8,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 100
-        },
-        {
-          "crop": "Pineapple",
-          "pH_min": 4.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 180
-        },
-        {
-          "crop": "Camote",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "sandy",
-          "moisture_level": "Moist",
-          "duration_days": 120
-        },
-        {
-          "crop": "Calamansi",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 180
-        },
-        {
-          "crop": "Papaya",
-          "pH_min": 6.0,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 150
-        },
-        {
-          "crop": "Lanzones",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 180
-        },
-        {
-          "crop": "Rambutan",
-          "pH_min": 5.5,
-          "pH_max": 6.5,
-          "soil_type": "loam",
-          "moisture_level": "Moist",
-          "duration_days": 180
-        }
-      ]
-      
+        "sunlight": "full",
+        "pest_resistance": "moderate",
+        "yield_per_hectare": "15-25 tons",
+        "water_requirement": "400-600mm/season"
+    }
+]
