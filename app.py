@@ -3,51 +3,66 @@ import json
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'  # Required for flash messages
+app.secret_key = 'your-secret-key'  # Required for flash messages
 
 # Load crop data
-with open('data/negros_crops.json') as f:
-    crop_data = json.load(f)
+with open('data/negros_crops.json', 'r') as f:
+    crops_data = json.load(f)
 
-# Get the valid pH range from the crop data
-min_ph = min(crop['pH_min'] for crop in crop_data)
-max_ph = max(crop['pH_max'] for crop in crop_data)
+@app.route('/')
+def welcome():
+    return render_template('welcome.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    crops = []
-    if request.method == 'POST' and 'exit' not in request.form:
+@app.route('/recommend', methods=['GET', 'POST'])
+def recommend():
+    if request.method == 'POST':
         try:
-            pH = float(request.form['ph'])
-            if pH < min_ph or pH > max_ph:
+            # Get form data
+            ph = float(request.form.get('ph', 0))
+            soil_type = request.form.get('soil_type', '')
+            moisture = request.form.get('moisture', '')
+            print(f"Received input - pH: {ph}, Soil Type: {soil_type}, Moisture: {moisture}")
+            
+            # Check if exit button was clicked
+            if 'exit' in request.form:
+                return render_template('goodbye.html')
+            
+            # Validate pH value
+            min_ph = 4.0
+            max_ph = 8.5
+            if ph < min_ph or ph > max_ph:
                 flash(f'Please enter a pH value between {min_ph} and {max_ph}', 'error')
-                return render_template('index.html', crops=crops)
-        except ValueError:
+                return render_template('index.html', min_ph=min_ph, max_ph=max_ph)
+            
+            # Find matching crops
+            matching_crops = []
+            for crop in crops_data:
+                # Check pH range
+                if crop['pH_min'] <= ph <= crop['pH_max']:
+                    # Check soil type
+                    if soil_type.lower() in crop['soil_type'].lower():
+                        # Check moisture level
+                        if moisture.lower() in crop['moisture_level'].lower():
+                            matching_crops.append(crop)
+            
+            print(f"\nTotal matching crops found: {len(matching_crops)}")
+            
+            if matching_crops:
+                return render_template('index.html', crops=matching_crops, min_ph=min_ph, max_ph=max_ph)
+            else:
+                flash('No matching crops found for your input. Please try different soil parameters.', 'error')
+                return render_template('index.html', min_ph=min_ph, max_ph=max_ph)
+        
+        except ValueError as e:
+            print(f"ValueError: {str(e)}")
             flash('Please enter a valid pH value', 'error')
-            return render_template('index.html', crops=crops)
-
-        soil_type = request.form['soil_type'].lower()
-        moisture = request.form['moisture'].lower()
-
-        print(f"User input - pH: {pH}, Soil: {soil_type}, Moisture: {moisture}")
-
-        for crop in crop_data:
-            print(f"Checking crop: {crop['crop']}")
-            if (crop['pH_min'] <= pH <= crop['pH_max'] and
-                crop['soil_type'] == soil_type and
-                crop['moisture_level'].lower() == moisture):
-                print(f"Match found: {crop['crop']}")
-                harvest_date = datetime.today() + timedelta(days=crop['duration_days'])
-                crop['harvest_date'] = harvest_date.strftime('%B %d, %Y')
-                crops.append(crop)
-
-        if not crops:
-            flash('No matching crops found for your input. Try adjusting your parameters.', 'info')
-
-    elif request.method == 'POST' and 'exit' in request.form:
-        return render_template('goodbye.html')
-
-    return render_template('index.html', crops=crops, min_ph=min_ph, max_ph=max_ph)
+            return render_template('index.html', min_ph=min_ph, max_ph=max_ph)
+        except Exception as e:
+            print(f"Error: {str(e)}")
+            flash(f'An error occurred: {str(e)}', 'error')
+            return render_template('index.html', min_ph=min_ph, max_ph=max_ph)
+    
+    return render_template('index.html', min_ph=4.0, max_ph=8.5)
 
 if __name__ == '__main__':
     app.run(debug=True)

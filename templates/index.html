@@ -5,92 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Philippine Crop Recommendation System</h1>
+        <h1><i class="fas fa-seedling"></i> Philippine Crop Recommendation System</h1>
 
         <div class="info-section">
-            <h2>Understanding Soil Types and Moisture Levels</h2>
+            <h2><i class="fas fa-info-circle"></i> Understanding Soil Types and Moisture Levels</h2>
             
             <div class="info-grid">
                 <div class="info-card">
-                    <h3>Soil Types</h3>
+                    <h3><i class="fas fa-mountain"></i> Soil Types</h3>
                     <div class="soil-types">
-                        <div class="soil-type">
-                            <h4>Loamy Soil</h4>
+                        <div class="soil-type" data-soil="loam">
+                            <h4><i class="fas fa-circle"></i> Loamy Soil</h4>
                             <img src="{{ url_for('static', filename='images/loam-soil.jpg') }}" alt="Loamy Soil" class="soil-image">
                             <p>Loamy soil is considered ideal for most crops because it:</p>
                             <ul>
-                                <li>Contains a balanced mixture of sand, silt, and clay</li>
-                                <li>Provides excellent drainage while retaining moisture</li>
-                                <li>Allows easy root penetration</li>
-                                <li>Rich in nutrients and organic matter</li>
+                                <li><i class="fas fa-check"></i> Contains a balanced mixture of sand, silt, and clay</li>
+                                <li><i class="fas fa-check"></i> Provides excellent drainage while retaining moisture</li>
+                                <li><i class="fas fa-check"></i> Allows easy root penetration</li>
+                                <li><i class="fas fa-check"></i> Rich in nutrients and organic matter</li>
                             </ul>
                         </div>
 
-                        <div class="soil-type">
-                            <h4>Sandy Soil</h4>
+                        <div class="soil-type" data-soil="sandy">
+                            <h4><i class="fas fa-circle"></i> Sandy Soil</h4>
                             <img src="{{ url_for('static', filename='images/sandy-soil.jpg') }}" alt="Sandy Soil" class="soil-image">
                             <p>Sandy soil is light and well-aerated but has some limitations:</p>
                             <ul>
-                                <li>Drains water quickly</li>
-                                <li>Warms up quickly in spring</li>
-                                <li>Lower in nutrients</li>
-                                <li>Requires frequent watering</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Drains water quickly</li>
+                                <li><i class="fas fa-check"></i> Warms up quickly in spring</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Lower in nutrients</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Requires frequent watering</li>
                             </ul>
                         </div>
 
-                        <div class="soil-type">
-                            <h4>Clay Soil</h4>
+                        <div class="soil-type" data-soil="clay">
+                            <h4><i class="fas fa-circle"></i> Clay Soil</h4>
                             <img src="{{ url_for('static', filename='images/clay-soil.jpg') }}" alt="Clay Soil" class="soil-image">
                             <p>Clay soil is nutrient-rich but can be challenging:</p>
                             <ul>
-                                <li>Retains water and nutrients well</li>
-                                <li>Can become compacted</li>
-                                <li>Slow to warm in spring</li>
-                                <li>Can be difficult for roots to penetrate</li>
+                                <li><i class="fas fa-check"></i> Retains water and nutrients well</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Can become compacted</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Slow to warm in spring</li>
+                                <li><i class="fas fa-exclamation-triangle"></i> Can be difficult for roots to penetrate</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="info-card">
-                    <h3>Moisture Levels</h3>
+                    <h3><i class="fas fa-tint"></i> Moisture Levels</h3>
                     <div class="moisture-levels">
-                        <div class="moisture-type">
-                            <h4>Dry Soil</h4>
+                        <div class="moisture-type" data-moisture="dry">
+                            <h4><i class="fas fa-sun"></i> Dry Soil</h4>
                             <img src="{{ url_for('static', filename='images/dry-soil.jpg') }}" alt="Dry Soil" class="moisture-image">
                             <p>Characteristics of dry soil:</p>
                             <ul>
-                                <li>Appears light in color</li>
-                                <li>Crumbly and loose texture</li>
-                                <li>Dusty when disturbed</li>
-                                <li>Water quickly drains through</li>
+                                <li><i class="fas fa-circle"></i> Appears light in color</li>
+                                <li><i class="fas fa-circle"></i> Crumbly and loose texture</li>
+                                <li><i class="fas fa-circle"></i> Dusty when disturbed</li>
+                                <li><i class="fas fa-circle"></i> Water quickly drains through</li>
                             </ul>
                         </div>
 
-                        <div class="moisture-type">
-                            <h4>Moist Soil</h4>
+                        <div class="moisture-type" data-moisture="moist">
+                            <h4><i class="fas fa-cloud-sun"></i> Moist Soil</h4>
                             <img src="{{ url_for('static', filename='images/moist-soil.jpg') }}" alt="Moist Soil" class="moisture-image">
                             <p>Ideal moisture level for most plants:</p>
                             <ul>
-                                <li>Appears dark and rich in color</li>
-                                <li>Forms a ball when squeezed</li>
-                                <li>Breaks apart easily</li>
-                                <li>Perfect balance of water and air</li>
+                                <li><i class="fas fa-check-circle"></i> Appears dark and rich in color</li>
+                                <li><i class="fas fa-check-circle"></i> Forms a ball when squeezed</li>
+                                <li><i class="fas fa-check-circle"></i> Breaks apart easily</li>
+                                <li><i class="fas fa-check-circle"></i> Perfect balance of water and air</li>
                             </ul>
                         </div>
 
-                        <div class="moisture-type">
-                            <h4>Wet Soil</h4>
+                        <div class="moisture-type" data-moisture="wet">
+                            <h4><i class="fas fa-cloud-rain"></i> Wet Soil</h4>
                             <img src="{{ url_for('static', filename='images/wet-soil.jpg') }}" alt="Wet Soil" class="moisture-image">
                             <p>Signs of overly wet soil:</p>
                             <ul>
-                                <li>Appears very dark and glossy</li>
-                                <li>Water pools on surface</li>
-                                <li>Sticky and moldable</li>
-                                <li>Limited air spaces for roots</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Appears very dark and glossy</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Water pools on surface</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Sticky and moldable</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Limited air spaces for roots</li>
                             </ul>
                         </div>
                     </div>
@@ -99,141 +100,162 @@
         </div>
 
         <div class="form-container">
-            <h2>Enter Your Soil Parameters</h2>
+            <h2><i class="fas fa-clipboard-list"></i> Enter Your Soil Parameters</h2>
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
                         <div class="alert alert-{{ category }}">
+                            <i class="fas fa-{% if category == 'error' %}exclamation-circle{% else %}info-circle{% endif %}"></i>
                             {{ message }}
                         </div>
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-            <form method="POST" action="/">
+            <form method="POST" action="{{ url_for('recommend') }}" id="soilForm">
                 <div class="form-group">
-                    <label for="ph">Soil pH ({{ min_ph }} - {{ max_ph }}):</label>
-                    <input type="number" step="0.1" name="ph" id="ph" value="{{ request.form.ph or '' }}" required min="{{ min_ph }}" max="{{ max_ph }}">
+                    <label for="ph">
+                        <i class="fas fa-flask"></i> Soil pH ({{ min_ph }} - {{ max_ph }}):
+                    </label>
+                    <div class="input-with-icon">
+                        <input type="number" step="0.1" name="ph" id="ph" value="{{ request.form.ph or '' }}" required min="{{ min_ph }}" max="{{ max_ph }}">
+                        <span class="input-icon"><i class="fas fa-percentage"></i></span>
+                    </div>
                     <div class="input-help">
+                        <i class="fas fa-info-circle"></i>
                         <p>pH measures soil acidity. Enter a value between {{ min_ph }} and {{ max_ph }} for best results.</p>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="soil_type">Soil Type:</label>
-                    <select name="soil_type" id="soil_type" required>
-                        <option value="">Select Soil Type</option>
-                        <option value="loam" {% if request.form.soil_type == 'loam' %}selected{% endif %}>Loam</option>
-                        <option value="sandy" {% if request.form.soil_type == 'sandy' %}selected{% endif %}>Sandy</option>
-                        <option value="clay" {% if request.form.soil_type == 'clay' %}selected{% endif %}>Clay</option>
-                    </select>
+                    <label for="soil_type">
+                        <i class="fas fa-mountain"></i> Soil Type:
+                    </label>
+                    <div class="input-with-icon">
+                        <select name="soil_type" id="soil_type" required>
+                            <option value="">Select Soil Type</option>
+                            <option value="loam" {% if request.form.soil_type == 'loam' %}selected{% endif %}>Loam</option>
+                            <option value="sandy" {% if request.form.soil_type == 'sandy' %}selected{% endif %}>Sandy</option>
+                            <option value="clay" {% if request.form.soil_type == 'clay' %}selected{% endif %}>Clay</option>
+                        </select>
+                        <span class="input-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="moisture">Soil Moisture Level:</label>
-                    <select name="moisture" id="moisture" required>
-                        <option value="">Select Moisture Level</option>
-                        <option value="dry" {% if request.form.moisture == 'dry' %}selected{% endif %}>Dry (30–50%)</option>
-                        <option value="moist" {% if request.form.moisture == 'moist' %}selected{% endif %}>Moist (50–70%)</option>
-                        <option value="wet" {% if request.form.moisture == 'wet' %}selected{% endif %}>Wet (70–90%)</option>
-                    </select>
+                    <label for="moisture">
+                        <i class="fas fa-tint"></i> Soil Moisture Level:
+                    </label>
+                    <div class="input-with-icon">
+                        <select name="moisture" id="moisture" required>
+                            <option value="">Select Moisture Level</option>
+                            <option value="dry" {% if request.form.moisture == 'dry' %}selected{% endif %}>Dry (30–50%)</option>
+                            <option value="moist" {% if request.form.moisture == 'moist' %}selected{% endif %}>Moist (50–70%)</option>
+                            <option value="wet" {% if request.form.moisture == 'wet' %}selected{% endif %}>Wet (70–90%)</option>
+                        </select>
+                        <span class="input-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
                 </div>
 
                 <div class="button-group">
-                    <button type="submit">Get Recommendations</button>
-                    <button type="submit" name="exit" value="1">Exit</button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-search"></i> Get Recommendations
+                    </button>
+                    <button type="submit" name="exit" value="1" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i> Exit
+                    </button>
                 </div>
             </form>
         </div>
 
         {% if crops %}
-            <h2>Recommended Crops</h2>
+            <h2><i class="fas fa-leaf"></i> Recommended Crops</h2>
             <div class="results-container">
                 {% for crop in crops %}
                 <div class="crop-card">
-                    <h3>{{ crop.crop }}</h3>
+                    <h3><i class="fas fa-seedling"></i> {{ crop.crop }}</h3>
                     <div class="crop-details">
                         <div class="detail-group">
-                            <h4>Growing Conditions</h4>
+                            <h4><i class="fas fa-sun"></i> Growing Conditions</h4>
                             <ul>
-                                <li>pH Range: {{ crop.pH_min }} – {{ crop.pH_max }}</li>
-                                <li>Soil Type: {{ crop.soil_type.capitalize() }}</li>
-                                <li>Moisture Level: {{ crop.moisture_level.capitalize() }}</li>
+                                <li><i class="fas fa-flask"></i> pH Range: {{ crop.pH_min }} – {{ crop.pH_max }}</li>
+                                <li><i class="fas fa-mountain"></i> Soil Type: {{ crop.soil_type.capitalize() }}</li>
+                                <li><i class="fas fa-tint"></i> Moisture Level: {{ crop.moisture_level.capitalize() }}</li>
                                 {% if crop.sunlight is defined %}
-                                <li>Sunlight Requirement: {{ crop.sunlight.capitalize() }}</li>
+                                <li><i class="fas fa-sun"></i> Sunlight Requirement: {{ crop.sunlight.capitalize() }}</li>
                                 {% endif %}
                                 {% if crop.water_requirement is defined %}
-                                <li>Water Requirement: {{ crop.water_requirement }}</li>
+                                <li><i class="fas fa-tint"></i> Water Requirement: {{ crop.water_requirement }}</li>
                                 {% endif %}
                             </ul>
                         </div>
                         {% if crop.planting_season is defined or crop.spacing is defined or crop.yield_per_hectare is defined or crop.pest_resistance is defined %}
                         <div class="detail-group">
-                            <h4>Planting Information</h4>
+                            <h4><i class="fas fa-calendar-alt"></i> Planting Information</h4>
                             <ul>
                                 {% if crop.planting_season is defined %}
-                                <li>Best Planting Season: {{ ", ".join(crop.planting_season) }}</li>
+                                <li><i class="fas fa-calendar"></i> Best Planting Season: {{ ", ".join(crop.planting_season) }}</li>
                                 {% endif %}
                                 {% if crop.spacing is defined %}
-                                <li>Plant Spacing: {{ crop.spacing.between_plants }} × {{ crop.spacing.between_rows }}</li>
+                                <li><i class="fas fa-ruler-combined"></i> Plant Spacing: {{ crop.spacing.between_plants }} × {{ crop.spacing.between_rows }}</li>
                                 {% endif %}
                                 {% if crop.yield_per_hectare is defined %}
-                                <li>Expected Yield: {{ crop.yield_per_hectare }} per hectare</li>
+                                <li><i class="fas fa-chart-line"></i> Expected Yield: {{ crop.yield_per_hectare }} per hectare</li>
                                 {% endif %}
                                 {% if crop.pest_resistance is defined %}
-                                <li>Pest Resistance: {{ crop.pest_resistance.capitalize() }}</li>
+                                <li><i class="fas fa-bug"></i> Pest Resistance: {{ crop.pest_resistance.capitalize() }}</li>
                                 {% endif %}
                             </ul>
                         </div>
                         {% endif %}
                         {% if crop.fertilizer_needs is defined %}
                         <div class="detail-group">
-                            <h4>Fertilizer Requirements</h4>
+                            <h4><i class="fas fa-flask"></i> Fertilizer Requirements</h4>
                             <ul>
-                                <li>Nitrogen: {{ crop.fertilizer_needs.nitrogen.capitalize() }}</li>
-                                <li>Phosphorus: {{ crop.fertilizer_needs.phosphorus.capitalize() }}</li>
-                                <li>Potassium: {{ crop.fertilizer_needs.potassium.capitalize() }}</li>
+                                <li><i class="fas fa-atom"></i> Nitrogen: {{ crop.fertilizer_needs.nitrogen.capitalize() }}</li>
+                                <li><i class="fas fa-atom"></i> Phosphorus: {{ crop.fertilizer_needs.phosphorus.capitalize() }}</li>
+                                <li><i class="fas fa-atom"></i> Potassium: {{ crop.fertilizer_needs.potassium.capitalize() }}</li>
                             </ul>
                         </div>
                         {% endif %}
                         <div class="detail-group">
-                            <h4>Timeline</h4>
+                            <h4><i class="fas fa-clock"></i> Timeline</h4>
                             <ul>
-                                <li>Growing Duration: {{ crop.duration_days }} days</li>
-                                <li>Expected Harvest: {{ crop.harvest_date }}</li>
+                                <li><i class="fas fa-calendar-day"></i> Growing Duration: {{ crop.duration_days }} days</li>
+                                <li><i class="fas fa-calendar-check"></i> Expected Harvest: {{ crop.harvest_date }}</li>
                             </ul>
                         </div>
                         <div class="detail-group">
-                            <h4>Growing Tips</h4>
+                            <h4><i class="fas fa-lightbulb"></i> Growing Tips</h4>
                             <ul>
                                 {% if crop.soil_type == 'loam' %}
-                                <li>Ideal for most crops due to balanced drainage and nutrient retention</li>
-                                <li>Regular watering and moderate fertilization recommended</li>
+                                <li><i class="fas fa-check-circle"></i> Ideal for most crops due to balanced drainage and nutrient retention</li>
+                                <li><i class="fas fa-check-circle"></i> Regular watering and moderate fertilization recommended</li>
                                 {% elif crop.soil_type == 'sandy' %}
-                                <li>Water more frequently due to quick drainage</li>
-                                <li>Add organic matter to improve nutrient retention</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Water more frequently due to quick drainage</li>
+                                <li><i class="fas fa-check-circle"></i> Add organic matter to improve nutrient retention</li>
                                 {% elif crop.soil_type == 'clay' %}
-                                <li>Improve drainage by adding organic matter</li>
-                                <li>Avoid overwatering to prevent waterlogging</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Improve drainage by adding organic matter</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Avoid overwatering to prevent waterlogging</li>
                                 {% endif %}
                                 
                                 {% if crop.moisture_level == 'dry' %}
-                                <li>Monitor soil moisture carefully</li>
-                                <li>Consider mulching to retain moisture</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Monitor soil moisture carefully</li>
+                                <li><i class="fas fa-check-circle"></i> Consider mulching to retain moisture</li>
                                 {% elif crop.moisture_level == 'moist' %}
-                                <li>Maintain consistent moisture levels</li>
-                                <li>Water when top inch of soil feels dry</li>
+                                <li><i class="fas fa-check-circle"></i> Maintain consistent moisture levels</li>
+                                <li><i class="fas fa-check-circle"></i> Water when top inch of soil feels dry</li>
                                 {% elif crop.moisture_level == 'wet' %}
-                                <li>Ensure good drainage to prevent root rot</li>
-                                <li>Monitor for signs of overwatering</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Ensure good drainage to prevent root rot</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Monitor for signs of overwatering</li>
                                 {% endif %}
 
                                 {% if crop.fertilizer_needs is defined and crop.fertilizer_needs.nitrogen == 'high' %}
-                                <li>Apply nitrogen-rich fertilizers regularly</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Apply nitrogen-rich fertilizers regularly</li>
                                 {% endif %}
                                 
                                 {% if crop.pest_resistance is defined and crop.pest_resistance == 'low' %}
-                                <li>Regular monitoring for pests recommended</li>
-                                <li>Consider implementing pest control measures</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Regular monitoring for pests recommended</li>
+                                <li><i class="fas fa-exclamation-circle"></i> Consider implementing pest control measures</li>
                                 {% endif %}
                             </ul>
                         </div>
@@ -243,11 +265,48 @@
             </div>
         {% elif request.method == 'POST' %}
             <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
                 <strong>No matching crops found for your input.</strong>
                 <p>Please try different soil parameters.</p>
             </div>
         {% endif %}
     </div>
+
+    <script>
+        // Add interactive hover effects for soil and moisture types
+        document.querySelectorAll('.soil-type, .moisture-type').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Add real-time validation for pH input
+        const phInput = document.getElementById('ph');
+        phInput.addEventListener('input', function() {
+            const value = parseFloat(this.value);
+            if (value < {{ min_ph }} || value > {{ max_ph }}) {
+                this.style.borderColor = '#e74c3c';
+                this.style.backgroundColor = '#fee';
+            } else {
+                this.style.borderColor = '#2ecc71';
+                this.style.backgroundColor = '#fff';
+            }
+        });
+
+        // Add visual feedback for form submission
+        const form = document.getElementById('soilForm');
+        form.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            submitBtn.disabled = true;
+        });
+    </script>
 </body>
 </html>
 

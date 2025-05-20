@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Crop Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <h1><i class="fas fa-seedling"></i> Welcome to Philippine Crop Recommendation System</h1>
+            
+            <div class="intro-card">
+                <h2><i class="fas fa-info-circle"></i> About This System</h2>
+                <p>Our Crop Recommendation System helps farmers and gardeners in the Philippines make informed decisions about which crops to grow based on their soil conditions. By analyzing key soil parameters, we provide personalized recommendations for optimal crop selection.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Soil Analysis</h3>
+                    <p>Input your soil's pH level, type, and moisture content for accurate recommendations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Crop Matching</h3>
+                    <p>Get personalized crop suggestions that thrive in your specific soil conditions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Growing Timeline</h3>
+                    <p>Learn about planting seasons, duration, and expected harvest dates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Growing Tips</h3>
+                    <p>Receive valuable advice on soil management and crop care.</p>
+                </div>
+            </div>
+
+            <div class="how-to-use">
+                <h2><i class="fas fa-book"></i> How to Use</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Measure Soil pH</h3>
+                        <p>Use a soil pH testing kit to determine your soil's acidity level.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Identify Soil Type</h3>
+                        <p>Determine if your soil is loamy, sandy, or clay-based.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Check Moisture Level</h3>
+                        <p>Assess your soil's moisture content (dry, moist, or wet).</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Get Recommendations</h3>
+                        <p>Enter your soil parameters to receive crop suggestions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="{{ url_for('recommend') }}" class="cta-button">
+                    <i class="fas fa-arrow-right"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

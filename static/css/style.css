@@ -5,6 +5,7 @@
     --text-color: #333;
     --border-radius: 8px;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
 }
 
 * {
@@ -32,11 +33,18 @@ h1 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 h2 {
     color: var(--secondary-color);
     margin: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .form-container {
@@ -46,29 +54,248 @@ h2 {
     box-shadow: var(--box-shadow);
     max-width: 600px;
     margin: 0 auto;
+    transition: transform var(--transition-speed);
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
-input, select {
+.form-group label i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon input,
+.input-with-icon select {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 2px solid #ddd;
     border-radius: var(--border-radius);
     font-size: 1rem;
+    transition: all var(--transition-speed);
+    background-color: white;
 }
 
-input:focus, select:focus {
+.input-with-icon select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.input-with-icon select:hover {
+    border-color: var(--secondary-color);
+}
+
+.input-with-icon select:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    color: #666;
+    pointer-events: none;
+}
+
+.input-help {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    background: #f5f5f5;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.input-help i {
+    color: var(--secondary-color);
+    margin-top: 0.2rem;
+}
+
+.input-help p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Add styles for the new nutrient level indicators */
+.nutrient-level {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.nutrient-level.low {
+    background-color: #ffecec;
+    color: #e74c3c;
+}
+
+.nutrient-level.medium {
+    background-color: #fff4e5;
+    color: #f39c12;
+}
+
+.nutrient-level.high {
+    background-color: #e8f8f5;
+    color: #27ae60;
+}
+
+/* Add styles for the crop residue indicators */
+.crop-residue {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.crop-residue.none {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.crop-residue.light {
+    background-color: #e8f8f5;
+    color: #27ae60;
+}
+
+.crop-residue.moderate {
+    background-color: #fff4e5;
+    color: #f39c12;
+}
+
+.crop-residue.heavy {
+    background-color: #ffecec;
+    color: #e74c3c;
+}
+
+/* Add styles for the moisture requirement indicators */
+.moisture-requirement {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.moisture-requirement.low {
+    background-color: #e8f8f5;
+    color: #27ae60;
+}
+
+.moisture-requirement.medium {
+    background-color: #fff4e5;
+    color: #f39c12;
+}
+
+.moisture-requirement.high {
+    background-color: #ffecec;
+    color: #e74c3c;
+}
+
+/* Add styles for the soil structure indicators */
+.soil-structure {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.soil-structure.granular {
+    background-color: #e8f8f5;
+    color: #27ae60;
+}
+
+.soil-structure.blocky {
+    background-color: #fff4e5;
+    color: #f39c12;
+}
+
+.soil-structure.platy {
+    background-color: #ffecec;
+    color: #e74c3c;
+}
+
+.soil-structure.prismatic {
+    background-color: #eaf2f8;
+    color: #3498db;
+}
+
+/* Add hover effects for form elements */
+.input-with-icon input:hover,
+.input-with-icon select:hover {
+    border-color: var(--secondary-color);
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+/* Add styles for form validation */
+.input-with-icon input:invalid,
+.input-with-icon select:invalid {
+    border-color: #e74c3c;
+    background-color: #fee;
+}
+
+.input-with-icon input:valid,
+.input-with-icon select:valid {
+    border-color: #2ecc71;
+    background-color: #fff;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+        padding: 0.5rem 2rem 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .input-help {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
 }
 
 .moisture-info {
@@ -91,7 +318,11 @@ button {
     border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     flex: 1;
 }
 
@@ -102,6 +333,7 @@ button[type="submit"]:not([name="exit"]) {
 
 button[type="submit"]:not([name="exit"]):hover {
     background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 button[name="exit"] {
@@ -111,6 +343,13 @@ button[name="exit"] {
 
 button[name="exit"]:hover {
     background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
 }
 
 .results-table {
@@ -149,6 +388,15 @@ button[name="exit"]:hover {
     border-radius: var(--border-radius);
     margin: 1rem 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error-message i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .goodbye-container {
@@ -192,6 +440,12 @@ button[name="exit"]:hover {
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .info-card h3 {
@@ -199,6 +453,10 @@ button[name="exit"]:hover {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .soil-types, .moisture-levels {
@@ -212,6 +470,12 @@ button[name="exit"]:hover {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed);
+}
+
+.soil-type:hover, .moisture-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .soil-image, .moisture-image {
@@ -220,12 +484,20 @@ button[name="exit"]:hover {
     object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
+    transition: transform var(--transition-speed);
+}
+
+.soil-type:hover .soil-image, .moisture-type:hover .moisture-image {
+    transform: scale(1.05);
 }
 
 .soil-type h4, .moisture-type h4 {
     color: var(--secondary-color);
     margin: 1rem 0;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .soil-type p, .moisture-type p {
@@ -235,23 +507,25 @@ button[name="exit"]:hover {
 }
 
 .soil-type ul, .moisture-type ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    list-style-type: none;
+    padding-left: 0;
     margin-bottom: 1rem;
 }
 
 .soil-type li, .moisture-type li {
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.input-help {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #666;
-    background: #f5f5f5;
-    padding: 0.75rem;
-    border-radius: var(--border-radius);
+.soil-type li i, .moisture-type li i {
+    color: var(--primary-color);
+}
+
+.soil-type li i.fa-exclamation-triangle, .moisture-type li i.fa-exclamation-circle {
+    color: #e74c3c;
 }
 
 @media (max-width: 768px) {
@@ -290,6 +564,9 @@ button[name="exit"]:hover {
     margin-bottom: 1rem;
     border-radius: var(--border-radius);
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .alert-error {
@@ -322,7 +599,7 @@ button[name="exit"]:hover {
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease-in-out;
+    transition: all var(--transition-speed);
 }
 
 .crop-card:hover {
@@ -337,6 +614,10 @@ button[name="exit"]:hover {
     text-align: center;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .crop-details {
@@ -350,6 +631,12 @@ button[name="exit"]:hover {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     height: 100%;
+    transition: transform var(--transition-speed);
+}
+
+.detail-group:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .detail-group h4 {
@@ -358,11 +645,14 @@ button[name="exit"]:hover {
     font-size: 1.2rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .detail-group ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    list-style-type: none;
+    padding-left: 0;
     margin: 0;
 }
 
@@ -371,18 +661,220 @@ button[name="exit"]:hover {
     color: var(--text-color);
     font-size: 0.95rem;
     line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.detail-group li:last-child {
-    margin-bottom: 0;
+.detail-group li i {
+    color: var(--primary-color);
+    min-width: 1rem;
+}
+
+.detail-group li i.fa-exclamation-circle {
+    color: #e74c3c;
+}
+
+.nutrient-levels {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 1rem;
+}
+
+.nutrient-group {
+    background: var(--background-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.nutrient-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nutrient-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+.form-group h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Welcome Page Styles */
+.welcome-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.intro-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.intro-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform var(--transition-speed);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.how-to-use {
+    margin: 4rem 0;
+}
+
+.how-to-use h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    position: relative;
+    transition: transform var(--transition-speed);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.cta-container {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all var(--transition-speed);
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
-    .crop-details {
+    .welcome-section {
+        padding: 1rem;
+    }
+    
+    .intro-card {
+        padding: 1.5rem;
+    }
+    
+    .features-grid {
         grid-template-columns: 1fr;
     }
     
-    .detail-group {
-        margin-bottom: 1rem;
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        padding: 1.5rem;
+    }
+} 
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        padding: 1.5rem;
     }
 } 
